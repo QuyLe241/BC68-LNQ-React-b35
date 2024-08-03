@@ -4,12 +4,13 @@ import danhSachGheData from "../Data/danhSachGhe.json"
 
 const HangGhe = ({hangGhe}) => {
   const renderGhe = () => {
+    // const dataGhe = danhSachGheData.danhSachGhe;
     return( <div> {danhSachGheData.map((item, index) => {
       let cssGheDaDat = ''
         if (item.daDat) {
           cssGheDaDat = 'gheDuocChon'
         }
-        return <button key={index} className='ghe'>{}</button>
+        return <button key={index} className='ghe ms-3'>{}</button>
     })};
     </div>
     )};
@@ -21,9 +22,8 @@ const HangGhe = ({hangGhe}) => {
       <span>{hangGhe.hang}</span>
       </div>
       {/* <div className="">{renderGhe()}</div> */}
-      {/* {renderGhe()} */}
     </div>
-    {/* <div className="">{renderGhe()}</div> */}
+    <div className="">{renderGhe()}</div>
     </div>
   )
 }
