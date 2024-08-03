@@ -1,5 +1,6 @@
 import React from 'react'
 // import danhSachGheData from "../Data/danhSachGhe.json"
+import {connect} from 'react-redux'
 
 
 const HangGhe = ({item, soHangGhe}) => {
@@ -7,11 +8,28 @@ const HangGhe = ({item, soHangGhe}) => {
     return item.danhSachGhe.map((item, index) => {
       let cssGheDaDat = "";
       let disabled = false;
+      //    Ghế đã bị đặt
       if(item.daDat){
         cssGheDaDat = "gheDuocChon";
         disabled = true;
       }
-      return <button key={index} disabled={disabled} style={{fontWeight: "700"}} className={`ghe ms-3 ${cssGheDaDat}`}>{item.soGhe}</button>
+
+      //    Ghế đang đặt
+      let cssGheDangDat = "";
+      let indexGheDangDat = (item.danhSachGheDangDat || [{
+        soGhe: "A1",
+        gia: "1000",
+    },
+    {
+      soGhe: "D5",
+      gia: "1000",
+    },
+  ]).findIndex((gheDangDat) => gheDangDat.soGhe === item.soGhe); 
+      if(indexGheDangDat !== -1){
+        cssGheDangDat = "gheDangChon";
+      }
+
+      return <button key={index} disabled={disabled} style={{fontWeight: "700"}} className={`ghe ms-3 ${cssGheDaDat} ${cssGheDangDat}`}>{item.soGhe}</button>
     })
   };
 
@@ -43,7 +61,15 @@ const HangGhe = ({item, soHangGhe}) => {
   )
 }
 
-export default HangGhe
+// export default HangGhe;
+
+const mapStateToProps = state => {
+  return {
+    danhSachGheDangDat: state.BaiTapDatVeReducer.danhSachGheDangDat
+  }
+}
+
+export default connect (mapStateToProps)(HangGhe);
 
 {/* <div className="">
           <span>{hangGhe.hang}</span>

@@ -3,7 +3,12 @@
 const stateDefault = {
     danhSachGheDangDat: [
         {
-
+            soGhe: "A1",
+            gia: "1000",
+        },
+        {
+            soGhe: "B5",
+            gia: "1000",
         }
     ]
 }

@@ -5,7 +5,7 @@ import BaiTapDatVeReducer from './BaiTapDatVeReducer'
         //  Nơi chứa các reducer
 
 const RootReducer = combineReducers({
-    // BaiTapDatVeReducer
+    BaiTapDatVeReducer
 })
 
 export default RootReducer; 
