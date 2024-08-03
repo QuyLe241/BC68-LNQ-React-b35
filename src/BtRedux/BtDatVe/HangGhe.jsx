@@ -9,7 +9,7 @@ const HangGhe = ({item}) => {
       if(item.daDat){
         cssGheDaDat = "gheDuocChon";
       }
-      return <button key={index} className={`ghe ms-3 ${cssGheDaDat}`}>{item.soGhe}</button>
+      return <button key={index} style={{fontWeight: "700"}} className={`ghe ms-3 ${cssGheDaDat}`}>{item.soGhe}</button>
     })
   };
   return (

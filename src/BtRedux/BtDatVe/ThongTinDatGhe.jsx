@@ -12,11 +12,11 @@ const ThongTinDatGhe = () => {
     </div>
 
         {/*   table  */}
-        <div className="mt-5">
+        <div className="mt-3">
         <div className="">
         <table className="table-default" border="" style={{width: "100%",}}>
           <thead>
-          <tr className='text-white' style={{fontSize: "25px"}}>
+          <tr className='text-white' style={{fontSize: "22px"}}>
           <th scope="col">Số ghế</th>
           <th scope="col">Giá 2</th>
           <th scope="col">Column 3</th>

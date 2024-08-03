@@ -55,7 +55,7 @@ const DatVe = () => {
                         })};
                     </div>
                 </div>
-                <div className="col-4 d-flex justify-content-center">
+                <div className="col-4">
                     <div className="row">
                         <div className=" display-6 text-light mt-2" style={{fontSize: "35px", fontWeight: "700",}}>Danh Sách Ghế Bạn Chọn</div>
                         <ThonginDatGhe/>
