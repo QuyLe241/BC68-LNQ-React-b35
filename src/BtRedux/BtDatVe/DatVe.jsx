@@ -28,7 +28,7 @@ const DatVe = () => {
             <div className="row">
                 <div className="col-8">
                     <div className="d-flex justify-content-center">
-                    <h1 className='display-6 text-warning' style={{fontWeight: "700",}}>Đặt Vé Xem Phim</h1>
+                    <h1 className='text-warning' style={{fontWeight: "700", fontSize: "28px"}}>Đặt Vé Xem Phim</h1>
                     </div>
                     <div className="d-flex justify-content-center">
                     <div className="text-white" style={{fontSize: "25px", fontWeight: "700",}}>
@@ -47,10 +47,10 @@ const DatVe = () => {
                         
                     </div>
                     {/*         Render hang ghế */}
-                    <div className="">
+                    <div className="ms-5">
                     {danhSachGheData.map((item, index) => {
                             return <div className='' key={index}>
-                                <HangGhe item={item}/>
+                                <HangGhe item={item} soHangGhe={index}/>
                             </div>
                         })};
                     </div>
