@@ -26,10 +26,14 @@ const DatVe = () => {
                 }}>
             <div className="container-fliud">
             <div className="row">
-                <div className="col-8 text-center">
+                <div className="col-8">
+                    <div className="d-flex justify-content-center">
                     <h1 className='display-6 text-warning' style={{fontWeight: "700",}}>Đặt Vé Xem Phim</h1>
+                    </div>
+                    <div className="d-flex justify-content-center">
                     <div className="text-white" style={{fontSize: "25px", fontWeight: "700",}}>
                             Màn Hình
+                    </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <div className="screen">
@@ -43,11 +47,13 @@ const DatVe = () => {
                         
                     </div>
                     {/*         Render hang ghế */}
+                    <div className="">
                     {danhSachGheData.map((item, index) => {
-                            return <div className='d-flex justify-content-start' key={index}>
+                            return <div className='' key={index}>
                                 <HangGhe hangGhe={item}/>
                             </div>
                         })};
+                    </div>
                 </div>
                 <div className="col-4 d-flex justify-content-center">
                     <div className="row">
