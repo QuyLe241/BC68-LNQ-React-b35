@@ -1,18 +1,21 @@
-import React, { Component } from 'react'
+
+import React from 'react'
 import './StyleBooking.css'
 import ThonginDatGhe from "./ThongTinDatGhe" 
 import danhSachGheData from "../Data/danhSachGhe.json"
 import HangGhe from "./HangGhe"
 
 
-const DatVe = () =>     {   
-        // renderHangGhe = () => {
+const DatVe = () => {   
+
+            //          function test render
+        // let renderHangGhe = () {
         //     return danhSachGheData.map((hangGhe, index => {
         //         return <div key={index}>
         //             <HangGhe/>
         //         </div>
-        //     }))
-        // }      
+        //     }));
+        // };
   return (
     <div style={{position: "fixed", width: "100%", height: "100%",
         backgroundImage: "url('./public/img/bgmovie.jpg')",
@@ -31,8 +34,20 @@ const DatVe = () =>     {
                     <div className="d-flex justify-content-center">
                         <div className="screen">
                         </div>
-                        {/* {this.renderHangGhe()} */}
+                        {/* {renderHangGhe()}; */}
+                        {/* danhSachGheData.map((hangGhe, index => {
+                        return <div key={index}>
+                        <HangGhe/>
+                        </div>
+                        })); */}
+                        
                     </div>
+                    {/*         Render hang ghế */}
+                    {danhSachGheData.map((item, index) => {
+                            return <div className='d-flex justify-content-start' key={index}>
+                                <HangGhe hangGhe={item}/>
+                            </div>
+                        })};
                 </div>
                 <div className="col-4 d-flex justify-content-center">
                     <div className="row">
@@ -47,4 +62,4 @@ const DatVe = () =>     {
   )
 }
 
-export default DatVe
+export default DatVe;
