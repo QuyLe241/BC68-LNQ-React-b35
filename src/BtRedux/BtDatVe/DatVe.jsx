@@ -45,7 +45,7 @@ const DatVe = () => {
                     {/*         Render hang ghế */}
                     {danhSachGheData.map((item, index) => {
                             return <div className='d-flex justify-content-start' key={index}>
-                                <HangGhe hangGhe={item}/>
+                                <HangGhe hangGhe={item} data={danhSachGheData}/>
                             </div>
                         })};
                 </div>
