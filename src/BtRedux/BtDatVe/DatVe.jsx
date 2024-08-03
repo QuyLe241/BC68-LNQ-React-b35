@@ -50,7 +50,7 @@ const DatVe = () => {
                     <div className="">
                     {danhSachGheData.map((item, index) => {
                             return <div className='' key={index}>
-                                <HangGhe hangGhe={item}/>
+                                <HangGhe item={item}/>
                             </div>
                         })};
                     </div>
