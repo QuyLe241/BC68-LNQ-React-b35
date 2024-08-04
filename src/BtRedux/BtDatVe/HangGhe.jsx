@@ -3,7 +3,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 
-const HangGhe = ({item, soHangGhe}) => {
+const HangGhe = ({item, soHangGhe,state}) => {
   const renderGhe = () => {
     return item.danhSachGhe.map((item, index) => {
       let cssGheDaDat = "";
@@ -16,7 +16,8 @@ const HangGhe = ({item, soHangGhe}) => {
 
       //    Ghế đang đặt
       let cssGheDangDat = "";
-      let indexGheDangDat = (item.danhSachGheDangDat || [{
+      let indexGheDangDat = (item.danhSachGheDangDat || [
+        {
         soGhe: "A1",
         gia: "1000",
     },
@@ -63,7 +64,7 @@ const HangGhe = ({item, soHangGhe}) => {
 
 // export default HangGhe;
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     danhSachGheDangDat: state.BaiTapDatVeReducer.danhSachGheDangDat
   }
